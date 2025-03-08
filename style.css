@@ -4,6 +4,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* Apply Montserrat to all heading elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
 
 /* Base styles with black background and light text */
 body {
