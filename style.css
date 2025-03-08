@@ -36,16 +36,18 @@ header h1 {
 }
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;          /* Spacing between items */
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;           /* Adjust gap between items as needed */
+  justify-items: center;
 }
 
 .gallery img,
 .gallery video {
+  width: 100%;         /* Ensure images take up full grid cell width */
+  height: auto;
   border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 /* Navigation styling */
 nav ul {
