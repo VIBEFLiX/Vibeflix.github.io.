@@ -5,24 +5,26 @@
   box-sizing: border-box;
 }
 
-/* Base styles */
+/* Base styles with black background and light text */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #000000; /* Pure black */
+  color: #ffffff;            /* Pure white text */
   line-height: 1.6;
   padding: 20px;
 }
+
 /* Header styling */
 header {
-  background-color: #fff;
+  background-color: #111111; /* Slightly lighter black for header */
   padding: 20px;
   text-align: center;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid #333333; /* Medium-dark gray border */
   margin-bottom: 30px;
 }
 
 header h1 {
+  font-family: 'Montserrat', sans-serif; /* Montserrat for headings */
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
@@ -37,25 +39,27 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #ff5733; /* Accent color on hover */
+  color: #ff5733; /* Vibrant orange accent on hover */
 }
+
 /* Section styling */
 section {
-  background-color: #fff;
+  background-color: #111111; /* Dark gray sections */
   padding: 40px;
   margin: 20px auto;
   max-width: 1000px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Subtle white glow */
   border-radius: 5px;
 }
 
 section h2 {
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat for section headings */
   font-size: 2rem;
   margin-bottom: 20px;
 }
@@ -64,21 +68,25 @@ section p,
 section ul {
   font-size: 1rem;
   margin-bottom: 15px;
+  color: #dddddd; /* Light gray for body text in sections */
 }
 
 section ul {
   list-style-type: disc;
   margin-left: 20px;
 }
+
 /* Footer styling */
 footer {
-  background-color: #fff;
+  background-color: #111111;
   padding: 20px;
   text-align: center;
-  border-top: 2px solid #ddd;
+  border-top: 2px solid #333333;
   margin-top: 30px;
   font-size: 0.9rem;
 }
+
+/* Responsive Design */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2rem;
@@ -91,3 +99,5 @@ footer {
 
   section {
     padding: 20px;
+  }
+}
