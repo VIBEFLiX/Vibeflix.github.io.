@@ -35,6 +35,18 @@ header h1 {
   margin-bottom: 10px;
 }
 
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;          /* Spacing between items */
+  justify-content: center;
+}
+
+.gallery img,
+.gallery video {
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
 /* Navigation styling */
 nav ul {
   list-style: none;
