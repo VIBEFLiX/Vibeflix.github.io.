@@ -85,12 +85,15 @@ section.show {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start; /* Ensures items align at the top */
     gap: 15px;
 }
 
+/* Fix Image & Video Sizes */
 .gallery img, .gallery video {
     width: 200px;
-    height: auto;
+    height: 200px; /* Ensures uniform height */
+    object-fit: cover; /* Prevents distortion */
     border-radius: 10px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -130,7 +133,9 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .gallery img {
+    .gallery img, .gallery video {
         width: 100%;
+        max-width: 300px; /* Prevents images from being too large */
+        height: auto;
     }
 }
