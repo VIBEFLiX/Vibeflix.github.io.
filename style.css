@@ -6,6 +6,8 @@ body {
     transition: background 0.1s ease;
     font-family: Arial, sans-serif;
     color: white; /* ✅ Makes all text white */
+}
+body {
     text-align: center;
 }
 
