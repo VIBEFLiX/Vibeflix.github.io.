@@ -72,3 +72,10 @@ animateParticles();
 document.addEventListener("DOMContentLoaded", function() {
     document.body.style.color = "white"; // Ensures all text is white
 });
+<nav>
+    <ul>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+    </ul>
+</nav>
