@@ -86,5 +86,22 @@ canvas {
 * {
     color: white !important; /* Forces all text to be white */
 }
+nav ul {
+    display: flex;
+    justify-content: center; /* Centers the items */
+    gap: 20px; /* Adds spacing between items */
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Ensures items stay in a line */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Adjust color as needed */
+    font-weight: bold;
+}
 
 
