@@ -1,7 +1,7 @@
 /* 🌌 Futuristic Background */
 body {
     margin: 0;
-    background: radial-gradient(circle at center, #141e30, #243b55);
+    background: radial-gradient(circle at center, #1a2a42, #324d67);
     transition: background 0.1s ease;
     font-family: Arial, sans-serif;
 }
