@@ -69,3 +69,6 @@ document.addEventListener("mousemove", function (e) {
 
 initParticles();
 animateParticles();
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.color = "white"; // Ensures all text is white
+});
