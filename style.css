@@ -82,44 +82,40 @@ section.show {
 
 /* Project Gallery */
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
     gap: 15px;
+    justify-content: center;
+    padding: 20px;
 }
 
-/* Ensure images and videos have a fixed size */
+/* Ensure Images & Videos Have Fixed Space */
 .gallery img, .gallery video {
-    width: 200px;
-    height: 200px; /* Ensuring uniform height */
-    object-fit: cover; /* Prevents stretching */
+    width: 100%;
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Prevents distortion */
     border-radius: 10px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
 }
 
+/* Lazy Loading (No Jumping) */
+.gallery img, .gallery video {
+    display: block;
+    loading: lazy;
+}
+
+/* Hover Effects */
 .gallery img:hover, .gallery video:hover {
     transform: scale(1.05);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Prevents sudden pop-ups */
-section {
-    max-width: 900px;
-    margin: 100px auto;
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(15px);
-    border-radius: 15px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease-in-out;
-}
-
-/* Section Animation - Appear smoothly on scroll */
-section.show {
-    opacity: 1;
-    transform: translateY(0);
+/* Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Contact Section */
@@ -152,9 +148,7 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .gallery img, .gallery video {
-        width: 100%;
-        max-width: 300px; /* Prevents images from being too large */
-        height: auto;
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
