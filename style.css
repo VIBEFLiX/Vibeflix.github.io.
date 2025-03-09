@@ -5,6 +5,7 @@ body {
     background: radial-gradient(circle at center, #000000, #333333);
     transition: background 0.1s ease;
     font-family: Arial, sans-serif;
+    color: white; /* ✅ Makes all text white */
 }
 
 
