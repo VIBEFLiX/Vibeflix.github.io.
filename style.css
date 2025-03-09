@@ -7,14 +7,14 @@ body {
 }
 
 html, body {
-    height: auto; /* Instead of 100% */
+    height: auto;
     min-height: 100vh;
-    overflow-y: scroll; /* Ensures vertical scrolling */
+    overflow-y: scroll; /* Forces scrolling */
 }
 
 /* 🎨 Floating Canvas Effect */
 canvas {
-    position: fixed; /* Keeps background in place */
+    position: absolute; /* Allows scrolling */
     top: 0;
     left: 0;
     width: 100%;
@@ -24,7 +24,7 @@ canvas {
 
 /* 📌 Main Content Wrapper */
 .main-content {
-    min-height: 150vh; /* Ensures enough content for scrolling */
+    min-height: 150vh; /* Ensures enough content */
     padding: 20px;
     text-align: center;
     color: white;
@@ -60,3 +60,4 @@ canvas {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
 }
+
