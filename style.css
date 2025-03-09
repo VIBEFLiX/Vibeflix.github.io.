@@ -12,11 +12,29 @@
     border-radius: 10px; /* Optional: rounded corners */
     object-fit: cover; /* Ensures proper cropping */
 }
- body {
+body {
     margin: 0;
-    overflow: hidden;
     background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    transition: background 0.3s ease-in-out;
+    color: white; /* Ensures text is visible on dark background */
+}
+
+html, body {
+    height: 100%;
+    overflow-y: auto; /* Enables scrolling */
+}
+
+/* Keep Background Fixed While Scrolling */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.9) 70%);
+    z-index: -1;
+}
+
 }
 
 
