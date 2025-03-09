@@ -37,17 +37,32 @@ header h1 {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;           /* Adjust gap between items as needed */
-  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);  /* 3 columns */
+  gap: 10px;  /* Space between images */
+  padding: 20px;
 }
 
-.gallery img,
+.gallery img, 
 .gallery video {
-  width: 100%;         /* Ensure images take up full grid cell width */
+  width: 100%;
   height: auto;
-  border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  border-radius: 10px;  /* Optional: rounded edges */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Different image sizes for a dynamic layout */
+.gallery img:nth-child(1) { grid-column: span 2; }
+.gallery img:nth-child(2) { grid-row: span 2; }
+.gallery img:nth-child(5) { grid-column: span 2; }
+.gallery img:nth-child(6) { grid-row: span 2; }
+.gallery video { grid-column: span 3; }
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 20px;
 }
 /* Navigation styling */
 nav ul {
