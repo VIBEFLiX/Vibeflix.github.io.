@@ -12,27 +12,27 @@ body {
 /* Gallery Grid */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Square tiles */
-    gap: 2px; /* Small gap like in your image */
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjust tile size */
+    gap: 5px;
     padding: 10px;
     max-width: 100%;
 }
 
-/* Images & Videos */
-.gallery img, .gallery video {
+/* Images */
+.gallery img {
     width: 100%;
-    aspect-ratio: 1 / 1; /* Makes it a perfect square */
+    aspect-ratio: 1 / 1; /* Ensures a square shape */
     object-fit: cover;
-    border-radius: 5px; /* Slightly rounded edges */
+    border-radius: 5px;
     transition: transform 0.2s ease-in-out;
 }
 
 /* Hover effect */
-.gallery img:hover, .gallery video:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+.gallery img:hover {
+    transform: scale(1.05);
 }
 
-/* Responsive Adjustments */
+/* Responsive */
 @media (max-width: 600px) {
     .gallery {
         grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
