@@ -64,7 +64,7 @@ document.addEventListener("mousemove", function (e) {
     let x = e.clientX / window.innerWidth * 100;
     let y = e.clientY / window.innerHeight * 100;
     
-    document.body.style.background = `radial-gradient(circle at ${x}% ${y}%, #00ffff, #001f3f)`;
+    document.body.style.background = `radial-gradient(circle at ${x}% ${y}%, #000000, #333333)`;
 });
 
 initParticles();
