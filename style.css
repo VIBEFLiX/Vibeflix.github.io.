@@ -2,37 +2,39 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #000;
     color: #fff;
-    text-align: center;
     margin: 0;
     padding: 0;
-}
-
-h2 {
-    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Gallery Grid */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
-    padding: 20px;
-    max-width: 90%;
-    margin: auto;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Square tiles */
+    gap: 2px; /* Small gap like in your image */
+    padding: 10px;
+    max-width: 100%;
 }
 
 /* Images & Videos */
 .gallery img, .gallery video {
     width: 100%;
-    height: auto;
+    aspect-ratio: 1 / 1; /* Makes it a perfect square */
     object-fit: cover;
-    border-radius: 10px;
-    background: #222; /* Background for broken images */
+    border-radius: 5px; /* Slightly rounded edges */
+    transition: transform 0.2s ease-in-out;
 }
 
-/* Responsive */
+/* Hover effect */
+.gallery img:hover, .gallery video:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Responsive Adjustments */
 @media (max-width: 600px) {
     .gallery {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     }
 }
