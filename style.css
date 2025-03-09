@@ -15,8 +15,8 @@
 body {
     margin: 0;
     overflow: hidden;
-    background: radial-gradient(circle at center, #0f0c29, #302b63, #24243e);
-    transition: background 0.1s ease;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    transition: background 0.3s ease-in-out;
 }
 
 canvas {
