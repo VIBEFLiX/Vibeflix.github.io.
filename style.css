@@ -6,25 +6,28 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* ✅ Ensure Scrolling Works */
 html, body {
     height: auto;
     min-height: 100vh;
-    overflow-y: auto; /* Allows scrolling when needed */
+    overflow-y: auto; /* Enables scrolling only when needed */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
 }
 
-/* 🎨 Floating Canvas Effect */
+/* 🎨 Floating Interactive Background Effect */
 canvas {
-    position: absolute; /* Allows scrolling */
+    position: fixed; /* Keeps background in place while scrolling */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
+    pointer-events: none; /* Prevents blocking clicks */
 }
 
 /* 📌 Main Content Wrapper */
 .main-content {
-    min-height: 150vh; /* Ensures enough content */
+    min-height: 200vh; /* Ensures enough content for scrolling */
     padding: 20px;
     text-align: center;
     color: white;
@@ -50,8 +53,19 @@ canvas {
 
 /* 🔥 Hover Effect on Images */
 .gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+    filter: brightness(1.2); /* Slight brightness effect */
+}
+
+/* ✨ Smooth Fade-In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.gallery img {
+    animation: fadeIn 0.6s ease-in-out;
 }
 
 /* 📱 Responsive Design */
