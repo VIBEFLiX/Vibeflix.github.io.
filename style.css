@@ -9,7 +9,7 @@ body {
 html, body {
     height: auto;
     min-height: 100vh;
-    overflow-y: scroll; /* Forces scrolling */
+    overflow-y: auto; /* Allows scrolling when needed */
 }
 
 /* 🎨 Floating Canvas Effect */
