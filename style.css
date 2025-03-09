@@ -103,5 +103,17 @@ nav ul li a {
     color: white; /* Adjust color as needed */
     font-weight: bold;
 }
+.glass-container {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+    backdrop-filter: blur(15px); /* Glass blur effect */
+    -webkit-backdrop-filter: blur(15px); /* Safari support */
+    border-radius: 12px; /* Smooth rounded edges */
+    padding: 15px 30px; /* Space inside the box */
+    text-align: center; /* Center text */
+    display: inline-block; /* Fit the size of the text */
+    margin: 10px auto; /* Adds spacing */
+    color: white; /* Ensure contrast */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Soft glow effect */
+}
 
 
