@@ -77,4 +77,8 @@ canvas {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
 }
+* {
+    color: white !important; /* Forces all text to be white */
+}
+
 
