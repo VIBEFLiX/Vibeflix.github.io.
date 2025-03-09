@@ -12,12 +12,13 @@
     border-radius: 10px; /* Optional: rounded corners */
     object-fit: cover; /* Ensures proper cropping */
 }
-body {
+ body {
     margin: 0;
     overflow: hidden;
     background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
     transition: background 0.3s ease-in-out;
 }
+
 
 canvas {
     position: fixed;
