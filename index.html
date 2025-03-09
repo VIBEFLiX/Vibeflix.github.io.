@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
-    
-    <!-- Link the CSS file -->
+    <title>Futuristic Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    
-    <title>Digin Prasad - Portfolio</title>
 </head>
 <body>
+
+    <!-- Header -->
     <header>
-        <h1>Digin Prasad</h1>
+        <h1>My NFT-Style Portfolio</h1>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -24,17 +20,17 @@
         </nav>
     </header>
 
-    <!-- About Me Section -->
+    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>I’m a passionate graphic designer creating visually compelling designs. I specialize in branding, digital illustrations, and web visuals.</p>
+        <p>Welcome to my futuristic portfolio. I specialize in immersive UI/UX designs and digital art.</p>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2>Memory.</h2>
+        <h2>My Work</h2>
         <div class="gallery">
-            <!-- Image Gallery -->
+            <!-- Image and video gallery -->
             <img src="Projects/E4A899B5-F633-41AA-A268-8D23893812C4.jpeg" alt="Image A">
             <img src="Projects/F559C2E3-CFC7-48C1-9DEC-B465A97F70DB.jpeg" alt="Image B">
             <img src="Projects/IMG_3647.jpeg" alt="Image C">
@@ -96,18 +92,34 @@
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: diginprasad.official@gmail.com</p>
-        <p>
-            <a href="https://www.linkedin.com/in/digin-prasad-571b82248/" target="_blank" rel="noopener noreferrer">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-                <span>LinkedIn Profile</span>
-            </a>
-        </p>
+        <h2>Contact Me</h2>
+        <p>Want to collaborate? Reach me on:</p>
+        <a href="mailto:your@email.com" class="btn">Email Me</a>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>© 2025 Digin Prasad</p>
+        <p>&copy; 2025 My Portfolio | All Rights Reserved</p>
     </footer>
+
+    <!-- JavaScript for Scroll Animations -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+
+            const revealSection = () => {
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    if (sectionTop < window.innerHeight - 100) {
+                        section.classList.add("show");
+                    }
+                });
+            };
+
+            revealSection();
+            window.addEventListener("scroll", revealSection);
+        });
+    </script>
+
 </body>
 </html>
