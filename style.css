@@ -1,10 +1,12 @@
 /* 🌌 Futuristic Background */
+/* 🌌 Black to Gray Futuristic Background */
 body {
     margin: 0;
-    background: radial-gradient(circle at center, #000000, #555555); !important;
+    background: radial-gradient(circle at center, #000000, #333333);
     transition: background 0.1s ease;
     font-family: Arial, sans-serif;
 }
+
 
 /* ✅ Ensure Scrolling Works */
 html, body {
