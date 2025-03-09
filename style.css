@@ -14,14 +14,11 @@
 }
 body {
     margin: 0;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    color: white; /* Ensures text is visible on dark background */
+    overflow: hidden;
+    background: radial-gradient(circle at center, #141e30, #243b55);
+    transition: background 0.1s ease;
 }
 
-html, body {
-    height: 100%;
-    overflow-y: auto; /* Enables scrolling */
-}
 canvas {
     position: fixed;
     top: 0;
