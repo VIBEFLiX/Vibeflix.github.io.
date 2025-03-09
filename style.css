@@ -105,15 +105,16 @@ nav ul li a {
 }
 .glass-text {
     background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-    backdrop-filter: blur(10px); /* Glass blur effect */
+    backdrop-filter: blur(10px); /* Blurred effect */
     -webkit-backdrop-filter: blur(10px); /* Safari support */
-    border-radius: 10px; /* Smooth edges */
+    border-radius: 10px; /* Smooth corners */
     padding: 10px 20px; /* Spacing inside */
     display: inline-block; /* Fit the text width */
-    color: white; /* Ensure text is visible */
+    color: white; /* Ensure text is readable */
     font-weight: bold;
     text-transform: uppercase;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Soft glow */
 }
+
 
 
