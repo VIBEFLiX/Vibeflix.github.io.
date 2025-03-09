@@ -21,7 +21,7 @@ body {
 }
 
 canvas {
-    position: fixed;
+    position: absolute; /* Allows scrolling */
     top: 0;
     left: 0;
     width: 100%;
